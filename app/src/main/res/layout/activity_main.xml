@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Phone Number"
+        android:textSize="22sp"
+        android:inputType="phone"
+        android:id="@+id/txt_phone_number"
+
+        />
+
+
+    <EditText
+        android:id="@+id/txt_phone_message"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:gravity="top"
+        android:hint="Enter Message"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_phone_number"
+         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btn_send"
+        android:text="SEND"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_phone_message"
+         />
+</android.support.constraint.ConstraintLayout>
