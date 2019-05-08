@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         String phoneNumber = txt_pNumber.getText().toString().trim();
         String Message = txt_Message.getText().toString().trim();
 
-        if (!txt_pNumber.getText().toString().equals("") || !txt_Message.getText().toString().equals("")){
+        if (!txt_pNumber.getText().toString().equals(null) || !txt_Message.getText().toString().equals(null)){
             SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(phoneNumber, null, Message, null, null);
 
